@@ -1,0 +1,181 @@
+/* Additional App-specific styles */
+.App {
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Enhanced button styles */
+.btn {
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.025em;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Enhanced form styles */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Enhanced card animations */
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced upload area */
+.upload-area {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 2px dashed #cbd5e0;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.upload-area.dragover {
+  background: linear-gradient(135deg, #edf2f7 0%, #cbd5e0 100%);
+  border-color: #667eea;
+  transform: scale(1.02);
+}
+
+/* Enhanced summary content */
+.summary-content {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  color: #2d3748;
+}
+
+.summary-content:focus {
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Enhanced recipient tags */
+.recipient-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.recipient-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.recipient-tag .remove {
+  transition: all 0.2s ease;
+}
+
+.recipient-tag .remove:hover {
+  color: #fed7d7;
+  transform: scale(1.2);
+}
+
+/* Enhanced message styles */
+.success-message, .error-message {
+  animation: slideInDown 0.4s ease-out;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced header */
+.header h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.header p {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .recipients-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .recipients-input input {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Loading animation enhancement */
+.loading {
+  border-width: 2px;
+  animation: spin 1s linear infinite;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.form-control:focus,
+.summary-content:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .App {
+    background: white;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    break-inside: avoid;
+  }
+  
+  .btn {
+    display: none;
+  }
+}
