@@ -275,7 +275,7 @@ console.log('OpenAI response:', completion);
 
 ### Welcome & Features Page
 <p align="center">
-  <img src="" width="800">
+  <img src="Home page.png" width="800">
 </p>
 
 ## Contributing
