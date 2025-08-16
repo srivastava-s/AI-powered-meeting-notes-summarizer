@@ -271,6 +271,13 @@ console.log('OpenAI response:', completion);
 - Deploy the `build` folder to services like Netlify, Vercel, or AWS S3
 - Update the API base URL for production
 
+## Output
+
+### Welcome & Features Page
+<p align="center">
+  <img src="" width="800">
+</p>
+
 ## Contributing
 
 1. Fork the repository
